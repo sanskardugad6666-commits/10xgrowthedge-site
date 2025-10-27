@@ -1,0 +1,16 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="10XGrowthEdge logo">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0047AB"/>
+      <stop offset="55%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#FF6B00"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#g)" stroke-width="42" stroke-linecap="round">
+    <path d="M84 160 L84 352" stroke="url(#g)"/>
+    <circle cx="214" cy="256" r="86"/>
+    <path d="M300 180 L450 340"/>
+    <path d="M300 340 L390 250"/>
+  </g>
+  <polygon points="420,210 500,190 460,270" fill="url(#g)"/>
+</svg>
