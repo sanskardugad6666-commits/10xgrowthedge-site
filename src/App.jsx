@@ -4,35 +4,97 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { FeatureCard, PriceCard } from './components/Cards';
 import { PRODUCTS, PRICING } from './data';
+const phone = "918016202202";
+
+const message = encodeURIComponent(
+  "Hi, I need help choosing the right Excel and ERP templates."
+);
+
+const waUrl = `https://wa.me/${phone}?text=${message}`;
+
+// Common button styles
+const primaryBtn =
+  "rounded-xl px-6 py-3 text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-black shadow-md";
+
+const secondaryBtn =
+  "rounded-xl px-6 py-3 text-sm font-semibold border border-slate-500/60 text-white hover:bg-slate-800/70";
+
+const ghostBtn =
+  "rounded-xl px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-800/60";
+
 
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-brandBlue/10 via-brandCyan/20 to-brandOrange/20" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-brandBlue/10 via-slate-900 to-slate-950" />
+
       <div className="container-max py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+        {/* LEFT SIDE – TEXT */}
         <div>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-            Simplify. Automate. <span className="gradient-text">Scale 10X</span>.
+            Ready-to-use Excel &amp; ERP toolkits{" "}
+            <span className="gradient-text">for MSMEs &amp; professionals</span>
           </h1>
+
           <p className="mt-4 text-slate-600 text-lg">
-            Ready-to-use Excel templates and micro‑automations that replace hours of manual work with clean dashboards, alerts, and workflows.
+            Plug-and-play systems for inventory, sales, finance and production —
+            built from 25+ years of real manufacturing experience in Indian
+            manufacturing &amp; FMCG.
           </p>
+
+          {/* BUTTONS */}
           <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#products" className="btn-gradient px-4 py-2 rounded-xl font-semibold">Browse Templates</a>
-            <a href="#contact" className="px-4 py-2 rounded-xl font-semibold border">Contact</a>
+            <a href="#products" className={primaryBtn}>
+              Explore Templates
+            </a>
+
+            <a href="#contact" className={secondaryBtn}>
+              Contact Us
+            </a>
+
+            <a
+              href={waUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ghostBtn}
+            >
+              Chat on WhatsApp
+            </a>
           </div>
-          <p className="mt-4 text-xs text-slate-500">Loved by 1,000+ operators</p>
+
+          <p className="mt-4 text-xs text-slate-500">
+            Loved by 1,000+ operators, accountants and business owners.
+          </p>
         </div>
+
+        {/* RIGHT SIDE – FEATURE CARDS */}
         <div className="grid grid-cols-2 gap-4">
-          <FeatureCard icon={<span>⚡</span>} title="Automations" desc="Trigger reorder, overdue follow‑ups, and daily digests automatically."/>
-          <FeatureCard icon={<span>📊</span>} title="Dashboards" desc="See P&L, cash, leads, and stock in one clean view."/>
-          <FeatureCard icon={<span>📦</span>} title="Templates" desc="Plug‑and‑play Excel files for sales, finance, ops, HR."/>
-          <FeatureCard icon={<span>🛡</span>} title="Best Practices" desc="Built‑in formulas, checks, and SOPs to prevent mistakes."/>
+          <FeatureCard
+            icon={<span>⚡</span>}
+            title="Automations"
+            desc="Trigger reports, reminders and trackers with simple workflows."
+          />
+          <FeatureCard
+            icon={<span>📊</span>}
+            title="Dashboards"
+            desc="See P&amp;L, sales, stock and cash flow at a glance."
+          />
+          <FeatureCard
+            icon={<span>📦</span>}
+            title="Templates"
+            desc="Plug-and-play Excel systems for every key business function."
+          />
+          <FeatureCard
+            icon={<span>♡</span>}
+            title="Best Practices"
+            desc="Built from real factory &amp; office operations since 1999."
+          />
         </div>
       </div>
     </section>
   );
 }
+
 
 function Products() {
   return (
